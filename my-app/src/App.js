@@ -2,21 +2,11 @@ import './App.css';
 import galssUrl from './glass.png';
 import styled from 'styled-components';
 import React, { useEffect } from 'react';
-
-// window.addEventListener(
-//   'scroll',
-//   () => {
-//     document.body.style.setProperty(
-//       '--scroll',
-//       window.pageYOffset / (document.body.offsetHeight - window.innerHeight),
-//     );
-//   },
-//   false,
-// );
+import HomePage from './HomePage';
 
 const Container = styled.div`
   width: 100%;
-  height: 1000px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,15 +19,17 @@ const Galss = styled.img`
   border: 1px solid red;
   position: fixed;
   display: block;
-  animation: rotate 1s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
+
+  &:hover {
+    // width: 200px;
+  }
 `;
+
 function App() {
-  useEffect(() => {});
   return (
     <Container>
-      <Galss src={galssUrl} alt="잔" />
+      {/* <Galss src={galssUrl} alt="잔" /> */}
+      <HomePage />
     </Container>
   );
 }
