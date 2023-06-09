@@ -3,13 +3,13 @@ import galssUrl from './glass.png';
 import styled from 'styled-components';
 import React, { useEffect } from 'react';
 import HomePage from './HomePage';
-
+import AnimationTest from './AnimationTest';
 const Container = styled.div`
   width: 100%;
   height: auto;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   border: 1px solid red;
   box-sizing: border-box;
 `;
@@ -29,7 +29,10 @@ function App() {
   return (
     <Container>
       {/* <Galss src={galssUrl} alt="잔" /> */}
-      <HomePage />
+      {/* <HomePage /> */}
+      <AnimationTest backgroundColor="gray" />
+      <AnimationTest backgroundColor="#888888" />
+      <AnimationTest backgroundColor="yellow" />
     </Container>
   );
 }
