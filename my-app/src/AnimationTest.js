@@ -8,6 +8,9 @@ const Wrapper = styled.div`
   padding: 1.6rem;
   background: ${(props) =>
     props.backgroundColor ? props.backgroundColor : 'white'};
+  //적용안됨 왜?
+
+  background-color: gray;
   border: 1px solid rebeccapurple;
 `;
 
@@ -24,6 +27,7 @@ const Text = styled.p`
   animation: ${({ animation }) => animation && goup} 2s ease-out;
   font-weight: bold;
   font-size: 2rem;
+  color: black;
 `;
 
 function AnimationTest() {

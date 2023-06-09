@@ -6,7 +6,7 @@ function HomePage({ location }) {
   return (
     <MainLayout>
       <AnimationTest backgroundColor="gray" />
-      <AnimationTest backgroundColor="#888888" />
+      <AnimationTest backgroundColor="red" />
       <AnimationTest backgroundColor="yellow" />
     </MainLayout>
   );
