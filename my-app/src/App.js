@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import AnimationTest from './AnimationTest';
+import AnimationTest from './components/AnimationTest';
+
 const Container = styled.div`
   width: 100%;
   height: auto;
@@ -10,9 +11,10 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <AnimationTest backgroundColor="gray" />
-      <AnimationTest backgroundColor="#888888" />
-      <AnimationTest backgroundColor="yellow" />
+      <AnimationTest />
+      {/* inputColor="red"  안됨 */}
+      <AnimationTest />
+      <AnimationTest />
     </Container>
   );
 }
