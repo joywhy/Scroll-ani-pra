@@ -27,6 +27,7 @@ const Text = styled.p`
   animation: ${({ animation }) => animation && goup} 2s ease-out;
   font-weight: bold;
   font-size: 2rem;
+  color: black;
 `;
 
 function AnimationTest() {
