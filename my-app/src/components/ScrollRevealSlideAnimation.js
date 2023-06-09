@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
-import { useWindowScrollEvent } from './hooks/useWindowScrollEvent';
-import { checkIsInViewport } from './utils/checkIsInViewport';
+import { useWindowScrollEvent } from '../hooks/useWindowScrollEvent';
+import { checkIsInViewport } from '../utils/checkIsInViewport';
 
 function ScrollRevealSlideAnimation({ children, direction = 'top' }) {
   const elemRef = useRef(null);

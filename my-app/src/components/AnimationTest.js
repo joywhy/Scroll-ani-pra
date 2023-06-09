@@ -1,17 +1,20 @@
 import React, { useRef, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { useWindowScrollEvent } from './hooks/useWindowScrollEvent';
-import { checkIsInViewport } from './utils/checkIsInViewport';
+import { useWindowScrollEvent } from '../hooks/useWindowScrollEvent';
+import { checkIsInViewport } from '../utils/checkIsInViewport';
 import ScrollRevealSlideAnimation from './ScrollRevealSlideAnimation';
+
 const Wrapper = styled.div`
   height: 40rem;
   padding: 1.6rem;
-  background: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : 'white'};
-  //적용안됨 왜?
-
-  background-color: gray;
-  border: 1px solid rebeccapurple;
+  background: ${(props) => {
+    console.log(props.inputColor);
+    return props.inputColor || 'white';
+  }};
+  /* background: {
+    inputcolor?inputcolor: 'white';
+  } */
+  //적용안됨 왜?AnimationTest 의 플옵스값을 사용할 순없을까?
 `;
 
 //애니에 관한 css
@@ -43,7 +46,8 @@ function AnimationTest() {
   useWindowScrollEvent(handleScrollAnimation);
 
   return (
-    <Wrapper>
+    <Wrapper inputColor="gray">
+      {/*  */}
       <ScrollRevealSlideAnimation direction="left">
         <Text ref={areaRef} animation={animation}>
           Testing Animation...
