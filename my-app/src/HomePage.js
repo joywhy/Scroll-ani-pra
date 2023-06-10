@@ -5,9 +5,7 @@ import AnimationTest from './components/AnimationTest';
 function HomePage() {
   return (
     <MainLayout>
-      <AnimationTest backgroundColor="gray" />
-      <AnimationTest backgroundColor="red" />
-      <AnimationTest backgroundColor="yellow" />
+      <AnimationTest />
     </MainLayout>
   );
 }
