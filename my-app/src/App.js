@@ -13,8 +13,6 @@ function App() {
     <Container>
       <AnimationTest />
       {/* inputColor="red"  안됨 */}
-      <AnimationTest />
-      <AnimationTest />
     </Container>
   );
 }

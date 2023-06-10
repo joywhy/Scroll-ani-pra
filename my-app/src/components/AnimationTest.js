@@ -8,12 +8,8 @@ const Wrapper = styled.div`
   height: 40rem;
   padding: 1.6rem;
   background: ${(props) => {
-    console.log(props.inputColor);
     return props.inputColor || 'white';
   }};
-  /* background: {
-    inputcolor?inputcolor: 'white';
-  } */
   //적용안됨 왜?AnimationTest 의 플옵스값을 사용할 순없을까?
 `;
 
@@ -31,9 +27,14 @@ const Text = styled.p`
   font-weight: bold;
   font-size: 2rem;
   color: black;
+  z-index: 9;
 `;
 
 function AnimationTest() {
+  // background: ${(props) => {
+  //   console.log(props.inputColor);
+  //   return props.inputColor || 'white';
+  // }};
   const [animation, setAnimation] = useState(false);
   const areaRef = useRef(null);
 
@@ -46,14 +47,31 @@ function AnimationTest() {
   useWindowScrollEvent(handleScrollAnimation);
 
   return (
-    <Wrapper inputColor="gray">
-      {/*  */}
-      <ScrollRevealSlideAnimation direction="left">
-        <Text ref={areaRef} animation={animation}>
-          Testing Animation...
-        </Text>
-      </ScrollRevealSlideAnimation>
-    </Wrapper>
+    <>
+      <Wrapper inputColor="gray">
+        {/* inputColor="gray" */}
+        <ScrollRevealSlideAnimation direction="left">
+          <Text ref={areaRef} animation={animation}>
+            Testing Animation...
+          </Text>
+        </ScrollRevealSlideAnimation>
+      </Wrapper>
+      <Wrapper inputColor="#e9ecef">
+        {/* inputColor="gray" */}
+        <ScrollRevealSlideAnimation direction="left">
+          <Text ref={areaRef} animation={animation}>
+            Testing Animation...
+          </Text>
+        </ScrollRevealSlideAnimation>
+      </Wrapper>
+      <Wrapper>
+        <ScrollRevealSlideAnimation direction="left">
+          <Text ref={areaRef} animation={animation}>
+            Testing Animation...
+          </Text>
+        </ScrollRevealSlideAnimation>
+      </Wrapper>
+    </>
   );
 }
 
